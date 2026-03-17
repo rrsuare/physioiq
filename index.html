@@ -12,6 +12,7 @@
 <meta http-equiv="Expires" content="0">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>PHYSIOIQ Hub</title>
+<!-- v1773770349 -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#000;color:#fff;min-height:100vh;display:flex;justify-content:center;-webkit-font-smoothing:antialiased}
@@ -24,7 +25,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 .streak-day.future{background:#1c1c1e;color:#48484a}
 .streak-day.done{background:#30d158;color:#000}
 .streak-day.today{background:#0a84ff;color:#fff;box-shadow:0 0 12px rgba(10,132,255,0.4)}
-.day-section{margin-bottom:24px}
+.day-section{display:block;margin-bottom:24px;overflow:hidden;clear:both}
 .day-label{font-size:11px;font-weight:800;text-transform:uppercase;color:#636366;letter-spacing:1px;margin-bottom:10px;padding-left:2px}
 .report-card{background:#1c1c1e;border-radius:14px;padding:14px 16px;margin-bottom:8px;cursor:pointer;display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,0.06);transition:all 0.15s;-webkit-tap-highlight-color:transparent}
 .report-card:active{background:#2c2c2e;transform:scale(0.97)}
@@ -62,23 +63,13 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">MON</div>
       <div class="report-card" onclick="openReport('physioiq_dashboard_mar9')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 9 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ff9f0a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 9 &middot; Pre-Workout</div><div class="card-type" style="color:#ff9f0a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('post_workout_mar9')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 9 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 9 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -86,33 +77,18 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">TUE</div>
       <div class="report-card" onclick="openReport('dashboard_mar10')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 10 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ff9f0a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 10 &middot; Pre-Workout</div><div class="card-type" style="color:#ff9f0a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar10')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 10 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 10 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_eod_mar10')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 10 &middot; End of Day</div>
-          <div class="card-type" style="color:#bf5af2;">EVENING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div></div>
+        <div class="card-content"><div class="card-title">Mar 10 &middot; End of Day</div><div class="card-type" style="color:#bf5af2;">EVENING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -120,33 +96,18 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">WED</div>
       <div class="report-card" onclick="openReport('dashboard_mar11')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 11 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ff9f0a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 11 &middot; Pre-Workout</div><div class="card-type" style="color:#ff9f0a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar11')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 11 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 11 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_eod_mar11')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 11 &middot; End of Day</div>
-          <div class="card-type" style="color:#bf5af2;">EVENING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div></div>
+        <div class="card-content"><div class="card-title">Mar 11 &middot; End of Day</div><div class="card-type" style="color:#bf5af2;">EVENING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -154,23 +115,13 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">THU</div>
       <div class="report-card" onclick="openReport('dashboard_mar12')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 12 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ff9f0a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 12 &middot; Pre-Workout</div><div class="card-type" style="color:#ff9f0a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar12')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 12 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 12 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -178,33 +129,18 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">FRI</div>
       <div class="report-card" onclick="openReport('dashboard_mar13')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 13 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ff9f0a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ff9f0a20;color:#ff9f0a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 13 &middot; Pre-Workout</div><div class="card-type" style="color:#ff9f0a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar13')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 13 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 13 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_eod_mar13')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 13 &middot; End of Day</div>
-          <div class="card-type" style="color:#bf5af2;">EVENING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div></div>
+        <div class="card-content"><div class="card-title">Mar 13 &middot; End of Day</div><div class="card-type" style="color:#bf5af2;">EVENING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -212,13 +148,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">SAT</div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar14')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 14 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 14 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -226,47 +157,27 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">SUN</div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar15')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">☀️</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 15 &middot; Rest Day + Snow Plow</div>
-          <div class="card-type" style="color:#30d158;">MORNING REPORT</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 15 &middot; Rest Day + Snow Plow</div><div class="card-type" style="color:#30d158;">MORNING REPORT</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
 
     <div class="day-section">
-      <div class="day-label">MON — NEW WEEK</div>
+      <div class="day-label">MON &mdash; NEW WEEK</div>
       <div class="report-card" onclick="openReport('physioiq_dashboard_mar16')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ffd60a20;color:#ffd60a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 16 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ffd60a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ffd60a20;color:#ffd60a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 16 &middot; Pre-Workout</div><div class="card-type" style="color:#ffd60a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar16')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#0a84ff20;color:#0a84ff;">🏊</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 16 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">POST-SWIM</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#0a84ff20;color:#0a84ff;">&#127946;</div></div>
+        <div class="card-content"><div class="card-title">Mar 16 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">POST-SWIM</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_eod_mar16')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 16 &middot; End of Day</div>
-          <div class="card-type" style="color:#bf5af2;">EVENING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#bf5af220;color:#bf5af2;">&#127769;</div></div>
+        <div class="card-content"><div class="card-title">Mar 16 &middot; End of Day</div><div class="card-type" style="color:#bf5af2;">EVENING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
@@ -274,23 +185,13 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="day-section">
       <div class="day-label">TUE</div>
       <div class="report-card" onclick="openReport('physioiq_dashboard_mar17')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#ffd60a20;color:#ffd60a;">&#9728;&#65039;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 17 &middot; Pre-Workout</div>
-          <div class="card-type" style="color:#ffd60a;">MORNING</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#ffd60a20;color:#ffd60a;">&#9728;&#65039;</div></div>
+        <div class="card-content"><div class="card-title">Mar 17 &middot; Pre-Workout</div><div class="card-type" style="color:#ffd60a;">MORNING</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
       <div class="report-card" onclick="openReport('physioiq_post_workout_mar17')">
-        <div class="card-left">
-          <div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">Mar 17 &middot; Post-Workout</div>
-          <div class="card-type" style="color:#30d158;">SWIM + LIFT + SAUNA</div>
-        </div>
+        <div class="card-left"><div class="card-icon" style="background:#30d15820;color:#30d158;">&#128293;</div></div>
+        <div class="card-content"><div class="card-title">Mar 17 &middot; Post-Workout</div><div class="card-type" style="color:#30d158;">SWIM + LIFT + SAUNA</div></div>
         <div class="card-chevron">&#8250;</div>
       </div>
     </div>
